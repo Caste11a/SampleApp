@@ -22,4 +22,35 @@
         android:name="com.example.sampleapp.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/lesson1FirstFragment"
+        android:name="com.example.sampleapp.ui.lesson1.Lesson1FirstFragment"
+        android:label="Lesson1FirstFragment"
+        tools:layout="@layout/fragment_lesson1_first" >
+        <action
+            android:id="@+id/action_lesson1FirstFragment_to_lesson1SecondFragment"
+            app:destination="@id/lesson1SecondFragment" />
+        <action
+            android:id="@+id/action_lesson1FirstFragment_to_lesson1DiceRollerFragment"
+            app:destination="@id/lesson1DiceRollerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lesson1SecondFragment"
+        android:name="com.example.sampleapp.ui.lesson1.Lesson1SecondFragment"
+        android:label="SecondFragment"
+        tools:layout="@layout/fragment_lesson1_second" >
+
+    <action
+        android:id="@+id/action_lesson1SecondFragment_to_lesson1FirstFragment"
+        app:destination="@id/lesson1FirstFragment" />
+    <argument
+        android:name="num"
+        app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/lesson1DiceRollerFragment"
+        android:name="com.example.sampleapp.ui.lesson1.Lesson1DiceRollerFragment"
+        android:label="DiceRollerFragment"
+        tools:layout="@layout/fragment_lesson1_diceroller" />
 </navigation>
