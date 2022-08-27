@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.example.sampleapp.databinding.FragmentLesson1SecondBinding
@@ -36,6 +37,7 @@ class Lesson1SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         binding.buttonSecond.setOnClickListener {
             findNavController().navigate(R.id.action_lesson1FirstFragment_to_lesson1SecondFragment)
         }
@@ -51,6 +53,11 @@ class Lesson1SecondFragment : Fragment() {
         }
         view.findViewById<TextView>(R.id.textview_random).text = randomNumber.toString()
 
+
+        view.findViewById<Button>(R.id.button_second).setOnClickListener{
+            val action = Lesson1SecondFragmentDirections.actionLesson1SecondFragmentToLesson1FirstFragment()
+            findNavController().navigate(action)
+        }
     }
 
     override fun onDestroyView() {
