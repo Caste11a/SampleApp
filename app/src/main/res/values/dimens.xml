@@ -7,5 +7,5 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_size20">20sp</dimen>
     <dimen name="small_padding8dp">8dp</dimen>
-    <dimen name="layout_magin16dp">16dp</dimen>
+    <dimen name="layout_margin16dp">16dp</dimen>
 </resources>

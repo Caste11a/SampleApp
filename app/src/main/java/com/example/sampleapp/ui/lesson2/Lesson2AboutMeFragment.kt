@@ -1,15 +1,16 @@
 package com.example.sampleapp.ui.lesson2
 
+import android.content.Context
+import android.content.Context.*
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
-import androidx.navigation.fragment.findNavController
-import com.example.sampleapp.databinding.FragmentLesson1SecondBinding
-import androidx.navigation.fragment.navArgs
 import com.example.sampleapp.R
 import com.example.sampleapp.databinding.FragmentLesson2AboutmeBinding
 
@@ -37,10 +38,32 @@ class Lesson2AboutMeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // 関数をボタンにアタッチする
+        view.findViewById<Button>(R.id.done_button).setOnClickListener{
+            addNickName(view)
+        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    // Doneボタン押下後の処理
+    private fun addNickName(view: View)
+    {
+        val editText = view.findViewById<EditText>(R.id.nickname_edit)
+        val nicknameTextView = view.findViewById<TextView>(R.id.nickname_text)
+
+        nicknameTextView.text = editText.text
+        // 編集テキスト、ボタンを非表示にする
+        editText.visibility = View.GONE
+//        view.visibility = View.GONE
+
+        nicknameTextView.visibility = View.VISIBLE
+
+        // キーボードを非表示にする
+//        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+//        imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 }
