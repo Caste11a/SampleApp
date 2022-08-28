@@ -56,4 +56,9 @@
     <action
         android:id="@+id/action_lesson1DiceRollerFragment_to_lesson1FirstFragment"
         app:destination="@id/lesson1FirstFragment" />
+    <fragment
+        android:id="@+id/lesson2AboutMeFragment"
+        android:name="com.example.sampleapp.ui.lesson2.Lesson2AboutMeFragment"
+        android:label="Lesson2AboutMeFragment"
+        tools:layout="@layout/fragment_lesson2_aboutme"/>
 </navigation>
