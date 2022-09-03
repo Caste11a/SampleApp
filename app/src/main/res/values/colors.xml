@@ -10,4 +10,5 @@
     <color name="buttonBackground">#BBDEFB</color>
     <color name="btnColorAccent">#76bf5e</color>
     <color name="bg_100">#A7FFEB</color>
+    <color name="colorAccent">#B9F6CA</color>
 </resources>

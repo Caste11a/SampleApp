@@ -41,7 +41,9 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:text=""
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:background="@color/colorAccent"
+        android:paddingBottom="@dimen/small_padding8dp"/>
 
     <ImageView
         android:id="@+id/star_image"
